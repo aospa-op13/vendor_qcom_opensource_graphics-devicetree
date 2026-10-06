@@ -5,8 +5,7 @@ endif
 
 ifeq ($(CONFIG_ARCH_SUN), y)
 dtbo-y += gpu/sun-gpu.dtbo \
-		gpu/sun-v2-gpu.dtbo \
-		gpu/sun-iot-gpu.dtbo
+		gpu/sun-v2-gpu.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_TUNA), y)
@@ -16,10 +15,6 @@ endif
 
 ifeq ($(CONFIG_ARCH_KERA), y)
 dtbo-y += gpu/kera-gpu.dtbo
-endif
-
-ifeq ($(CONFIG_ARCH_SM6150), y)
-dtbo-y += gpu/sm6150-gpu.dtbo
 endif
 
 always-y    := $(dtb-y) $(dtbo-y)
